@@ -47,10 +47,22 @@ yesBtn.addEventListener("click", () => {
 });
 
 // --- kalau tombol No berhasil dipencet ---
-noBtn.addEventListener("click", () => {
-  funnyMessage.style.display = "block";
+let scale = 1; // ukuran awal
 
+noBtn.addEventListener("click", () => {
+  // pesan popup
+  funnyMessage.style.display = "block";
   setTimeout(() => {
     funnyMessage.style.display = "none";
   }, 2000);
+
+  // efek mengecil
+  scale -= 0.2;
+  if (scale <= 0) {
+    noBtn.style.display = "none"; // hilang
+  } else {
+    noBtn.style.transform = `scale(${scale})`;
+    noBtn.style.transition = "transform 0.3s ease";
+  }
 });
+
