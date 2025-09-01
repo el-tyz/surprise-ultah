@@ -90,14 +90,19 @@ body {
   transition: 0.2s;
 }
 .gif-result {
-  max-width: 200px;
+  width: 200px;     
+  max-width: 80%;   
   height: auto;
   display: block;
   margin: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 12px; 
 }
-.result-container h2 {
-  font-size: 3.2rem;
+.result-container {
+  display: none;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
 }
 
@@ -422,3 +427,4 @@ body {
     border-color: rgb(228, 228, 228);
   }
 }
+
