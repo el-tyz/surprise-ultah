@@ -31,23 +31,24 @@ body {
   transition: 0.2s;
 }
 .tenor-gif-embed {
-  height: 15rem;
-  pointer-events: none;
+  width: 100%;
+  max-width: 300px; 
+  height: auto;
   border-radius: 10px;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 .question {
-  position: relative;
-  top: 500%;
-  font-size: 3.5rem;
+  font-size: clamp(1.2rem, 5vw, 2rem); 
   margin-bottom: 1rem;
+  position: relative;
+  top: 0; 
 }
 .button-container {
   display: flex;
   justify-content: center;
-  top: 600%;
-  margin-top: 3px;
-  gap: 1.5rem;
+  gap: 1rem;
+  margin-top: 1rem;
+  position: static; 
 }
 .btn {
   position: absolute;
@@ -427,4 +428,5 @@ body {
     border-color: rgb(228, 228, 228);
   }
 }
+
 
